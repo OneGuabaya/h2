@@ -10,6 +10,23 @@
  */
 let arr = ["foo","bar","baz","qux","echo"];
 let result = [];
+let num = arr.length
+
+let testApp = () => {
+    for(n=0;n<num;n++){
+        let value = arr[n]
+        if (value == "bar" || value == "baz"){
+            result.push(value.replace("a","@"))
+    }
+        if (value == "qux") {
+            result.push(value.toUpperCase())
+        }
+    } return result
+}
+
+testApp()
+
+console.log(result)
 
 
 //export result

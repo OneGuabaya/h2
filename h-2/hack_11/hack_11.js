@@ -18,7 +18,33 @@
 let numberArray = [1,2,3,4,5];
 let stringArray = ["foo","bar","baz","qux","echo"]
 let result = [];
+let completeArray =  [...numberArray, "h@ck",...stringArray]
+let num = completeArray.length
 
+let testApp = () => {
+    result.push("h@ck")
+    for (n=0;n<num;n++) {
+        if (completeArray[n] == 1 || completeArray[n] == 3 || completeArray[n] == 5) {
+            let numberString = ["one","two","three","four","five"]
+            result.push(numberString[n])
+        } else { if (completeArray[n] == "foo" || completeArray[n] == "baz" || completeArray[n] == "qux" || completeArray[n] == "echo") {
+            test = completeArray[n]
+            test = test.replace(/o/g,0)
+            test = test.replace(/a/g,"@")
+            test = test.replace(/a/g,"@")
+            test = test.replace(/x/g,"X")
+            test = test.replace(/e/g,3)
+            result.push(test)
+        } else { if (completeArray[n] == "bar") {
+            test = completeArray[n]
+            test = test.replace(/b/g,"B")
+            result.push(test)
+        } else { result.push(completeArray[n]) }}} 
+    } return result
+}
+
+testApp()
+result.push("h@ck")
 
 //export result
 module.exports = result;
